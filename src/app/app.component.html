@@ -2,8 +2,17 @@
 <!-- <a href="/elements">Elements</a>
 <a href="/collections">Collections</a> -->
 
-<!-- routerLink talks to the router -->
-<a routerLink="/elements">Elements</a>
-<a routerLink="/collections">Collections</a>
+<div class="ui container">
+  <div class="ui secondary pointing menu">
+    <!-- routerLink talks to the router -->
+    <!-- when the routerLinkActice is active, the semantic class of 'active' is applied -->
+    <a routerLink="/elements" routerLinkActive="active" class="item">Elements</a>
+    <a routerLink="/collections" routerLinkActive="active" class="item">Collections</a>
+  </div>
+  <div class="ui segment">
+    <!-- where content goes -->
+    <router-outlet></router-outlet>
+  </div>
+</div>
 
-<router-outlet></router-outlet>
+
