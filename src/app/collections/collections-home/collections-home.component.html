@@ -4,19 +4,14 @@
 <app-table classNames="striped celled" [data]="data" [headers]="headers"></app-table>
 
 <app-divider>Tab Menu</app-divider>
-<div class="ui grid">
-  <div class="four wide column">
-    <div class="ui vertical fluid tabular menu">
-      <a class="item" routerLink="./" routerLinkActive="active">Biography</a>
-      <a class="item" routerLink="companies" routerLinkActive="active">Companies</a>
-      <!-- can also do this -->
-      <!-- <a class="item" routerLink="/collections/companies" routerLinkActive="active">Companies</a> -->
-      <a class="item" routerLink="partners" routerLinkActive="active">Partners</a>
-    </div>
-  </div>
-  <div class="twelve wide stretch column">
-    <div class="ui segment">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
-</div>
+<app-tabs>
+  <a class="item" routerLink="./" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >Biography</a>
+  <a class="item" routerLink="companies" routerLinkActive="active" >Companies</a>
+  <!-- can also do this -->
+  <!-- <a class="item" routerLink="/collections/companies" routerLinkActive="active">Companies</a> -->
+  <a class="item" routerLink="partners" routerLinkActive="active">Partners</a>
+
+  <!-- can also property bind routerLink like this. angular will build up a joined link based on the array
+  <a class="item" [routerLink]="['./', 'hi', ]" routerLinkActive="active">Biography</a> -->
+
+</app-tabs>
