@@ -1,0 +1,21 @@
+<!-- [ngClass]="classNames" //used to pass through some classnames that will be applies to an element inside a component. -->
+
+<table [ngClass]="classNames" class="ui table">
+  <thead>
+    <tr>
+      <!-- iterate over list of header objects in the collections-home component -->
+      <th *ngFor="let h of headers" >
+        {{ h.label }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- iterate over list of data -->
+    <tr *ngFor="let record of data">
+      <!-- iterate over headers and  look up the record by the headers key-->
+      <td *ngFor="let h of headers">
+        {{ record[h.key] }}
+      </td>
+    </tr>
+  </tbody>
+</table>
