@@ -1,2 +1,10 @@
 <p>views-home works!</p>
-<app-statistics></app-statistics>
+<!-- property binding syntax to pass stats property down -->
+<!-- property name to pass down is data, and is coming from the stats property on the home component -->
+<app-divider>Statistics Component</app-divider>
+<app-statistics [data]="stats"></app-statistics>
+<app-divider>Item List Component</app-divider>
+<!-- Adding Image 2:  -->
+<!-- property binding syntax to pass items property down -->
+<!-- property name to pass down is images, and is coming from the items property on the view-home component -->
+<app-item-list [images]="items"></app-item-list>

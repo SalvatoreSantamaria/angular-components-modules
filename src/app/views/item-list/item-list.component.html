@@ -1,0 +1,17 @@
+<!-- Adding images 4: loop through the image data in the subcomponent html -->
+
+<div class="ui items">
+  <div class="item" *ngFor="let i of images">
+    <div class="image">
+      <img [src]="i.image">
+    </div>
+    <div class="content">
+      <div class="header">
+        {{i.title}}
+      </div>
+      <div class="description">
+        <p>{{ i.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

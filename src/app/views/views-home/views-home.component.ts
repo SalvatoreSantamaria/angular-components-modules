@@ -7,6 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewsHomeComponent implements OnInit {
 
+  stats = [
+    { value: 22, label: "# of Users"},
+    { value: 900, label: "Profit"},
+    { value: 4.9, label: "Rating"},
+  ]
+
+  // Adding Image 1: The data
+  items = [
+    { image: 'assets/images/couch.jpeg', title: 'Couch', description: 'comfy couch' },
+    { image: 'assets/images/dresser.jpeg', title: 'Dresser', description: 'stylish dresser' }
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
