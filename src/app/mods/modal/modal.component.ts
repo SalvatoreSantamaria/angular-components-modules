@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { componentFactoryName } from '@angular/compiler';
+import { Component, OnInit, ElementRef } from '@angular/core';
+
+// ElementRef gives us access to the host element of the component
 
 @Component({
   selector: 'app-modal',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
 
-  constructor() { }
+  constructor(private el: ElementRef) {
+    console.log(this.el.nativeElement)
+   }
 
+  // this displays the modal as a direct child of the body element by appending directly to it
   ngOnInit(): void {
+    document.body.appendChild(this.el.nativeElement)
   }
 
 }
