@@ -19,4 +19,9 @@ export class ModalComponent implements OnInit {
     document.body.appendChild(this.el.nativeElement)
   }
 
+  // this removes the modal after navigating away from the modal.
+  ngOnDestroy() {
+    this.el.nativeElement.remove()
+  }
+
 }
