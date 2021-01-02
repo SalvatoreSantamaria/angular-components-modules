@@ -1,7 +1,7 @@
 <p>modal works!</p>
-<div class="ui dimmer visible active">
+<div (click)="onCloseClick()" class="ui dimmer visible active">
   <div class="ui modal visible active">
-    <i class="close icon"></i>
+    <i (click)="onCloseClick()" class="close icon"></i>
     <div class="header">
       MODAL!
     </div>
@@ -9,7 +9,7 @@
       <p>Content here</p>
     </div>
     <div class="actions">
-      <button class="ui button">OK</button>
+      <button (click)="onCloseClick()" class="ui button">OK</button>
     </div>
   </div>
 </div>
